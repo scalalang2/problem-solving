@@ -1,38 +1,28 @@
-#include <iostream>
+// 출처 : https://sihyungyou.github.io/baekjoon-11729/
+
+#include <cstdio>
 #include <vector>
 #include <utility>
 
 using namespace std;
 
-struct Direction {
-    int from;
-    int to;
-};
+vector<pair<int, int> > v;
 
-vector<Direction> vec;
-
-void solve(int n, int from, int by, int to) {
-    Direction d;
-    d.from = from;
-    d.to = to;
-
-    if (n == 1) {
-        vec.push_back(d);
-    }else {
-        solve(n-1, from, to, by);
-        vec.push_back(d);
-        solve(n-1, by, from, to);
+void hanoi(int n, int from, int by, int to) {
+    if (n == 1) v.push_back(make_pair(from, to));
+    else {
+        hanoi(n-1, from, to, by);
+        v.push_back(make_pair(from, to));
+        hanoi(n-1, by, from, to);
     }
 }
 int main() {
 
     int n;
     scanf("%d", &n);
-    solve(n, 1, 2, 3);
-    cout << vec.size() << endl;
-    for (int i = 0; i < vec.size(); i++) {
-        cout << vec[i].from << " " << vec[i].to << endl;
-    }
+    hanoi(n, 1, 2, 3);
+    printf("%ld\n", v.size());
+    for (int i = 0; i < v.size(); i++) printf("%d %d\n", v[i].first, v[i].second);
 
     return 0;
 }
