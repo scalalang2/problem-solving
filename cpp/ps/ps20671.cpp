@@ -15,6 +15,7 @@ struct Block {
 
 vector<Block> vec;
 
+// binart search로 문제를 푼다?
 bool compare(Block a, Block b) {
     if(a.height == b.height) {
         return a.left > b.left;
