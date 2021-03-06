@@ -4,3 +4,6 @@
 
 풀이에 사용 할 언어
 - C++, Go, Python, Java
+
+참고자료
+- https://baactree.tistory.com/52
