@@ -3,7 +3,7 @@
 - 알고리즘 문제 풀이 내용 정리
 
 풀이에 사용 할 언어
-- C++, Go, Python, Java
+- C++, Java, Kotlin
 
 참고자료
 - https://baactree.tistory.com/52
