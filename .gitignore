@@ -1,6 +1,7 @@
 .DS_Store
-.idea
+*.jar
 a.out
-.vscode
-kotlin/out
 *.class
+.idea
+META-INF/
+kotlin/out
